@@ -1,20 +1,24 @@
 // @ts-check
-// Note: type annotations allow type checking and IDEs autocompletion
 
+const title = 'Pep Locanto Blog';
+const desc = 'About programming and snippets by Pep Locanto, Senior FrontEnd Dev in Madrid, Spain.';
+const canonical = 'https://peplocanto.com';
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
-  url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
+  title: title,
+  tagline: 'Reach me at https://peplocanto.com',
+  url: 'https://peplocanto.github.io',
+  baseUrl: '/pep-blog/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'peplocanto',
+  plugins: ['docusaurus-plugin-sass'],
+  projectName: 'pep-blog',
+  staticDirectories: ['static'],
 
   presets: [
     [
@@ -23,17 +27,15 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/peplocanto/pep-blog',
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/peplocanto/pep-blog',
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve('./src/styles/global.scss'),
         },
       }),
     ],
@@ -42,71 +44,40 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      metadata: [
+        { name: "author", content: "Pep Locanto" },
+        { name: "description", content: desc },
+        { property: "og:type", content: "website" },
+        { name: "og:title", property: "og:title", content: title },
+        { name: "og:description", property: "og:description", content: desc },
+        { property: "og:site_name", content: title },
+        { property: "og:url", content: canonical },
+        { name: "twitter:card", content: "summary" },
+        { name: "twitter:title", content: title },
+        { name: "twitter:description", content: desc },
+        { name: "twitter:site", content: "@peplocanto" },
+        { name: "twitter:creator", content: "@peplocanto" },
+        { property: "og:image", content: "https://imgur.com/3jiviWb.png" },
+        { name: "twitter:image", content: "https://imgur.com/MHqJKZw.png" },
+      ],
       navbar: {
-        title: 'My Site',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          src: 'img/logo.png',
         },
         items: [
           {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Snippets',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
-          {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
-          },
+          { to: '/blog', label: 'Blog', position: 'left' },
+          { to: '/contacts', label: 'Contacts', position: 'left' },
         ],
       },
       footer: {
-        style: 'dark',
-        links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Made with ❤ and caffeine by Pep Locanto. Copyright © ${new Date().getFullYear()}`,
       },
       prism: {
         theme: lightCodeTheme,
