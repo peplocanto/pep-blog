@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpep_blog=self.webpackChunkpep_blog||[]).push([[127],{8578:function(e){e.exports=JSON.parse('{"permalink":"/pep-blog/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"previousPage":null,"nextPage":null,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

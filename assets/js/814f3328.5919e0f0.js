@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpep_blog=self.webpackChunkpep_blog||[]).push([[535],{5641:function(e){e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"placeholder","permalink":"/pep-blog/blog/placeholder"}]}')}}]);

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://peplocanto.github.io/pep-blog/blog</id>
+    <title>Pep Locanto Blog Blog</title>
+    <updated>2022-03-01T13:27:26.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://peplocanto.github.io/pep-blog/blog"/>
+    <subtitle>Pep Locanto Blog Blog</subtitle>
+    <icon>https://peplocanto.github.io/pep-blog/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[placeholder]]></title>
+        <id>/placeholder</id>
+        <link href="https://peplocanto.github.io/pep-blog/blog/placeholder"/>
+        <updated>2022-03-01T13:27:26.000Z</updated>
+    </entry>
+</feed>
